@@ -26,7 +26,7 @@ keys.forEach((key) => {
       master.connect(ctx.destination);
 
       const osc = ctx.createOscillator();
-      osc.frequency.value = key.dataset.key;
+      osc.frequency.value = key.dataset.key * document.querySelector('input[name="oct-input"]:checked').value;
 
       osc.type = document.querySelector("#select-wave").value;
 
