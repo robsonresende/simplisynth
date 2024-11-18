@@ -28,7 +28,7 @@ keys.forEach((key) => {
       const osc = ctx.createOscillator();
       osc.frequency.value = key.dataset.key;
 
-      osc.type = "triangle";
+      osc.type = document.querySelector("#select-wave").value;
 
       osc.connect(master);
 
