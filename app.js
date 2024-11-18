@@ -1,9 +1,3 @@
-// Octave
-
-// Wave
-
-// Detune 
-
 const keys = document.querySelectorAll(".pianokey")
 
 keys.forEach((key) => {
@@ -12,12 +6,16 @@ keys.forEach((key) => {
         // pointerup to off the button
       key.addEventListener('pointerup', (e) => {
         osc.stop();
+        key.style.borderColor = "#aaaaaa";
       });
 
       // pointerleave in case the user leave the button
       key.addEventListener('pointerleave', (e) => {
         osc.stop();
+        key.style.borderColor = "#aaaaaa";
       });
+
+      key.style.borderColor = "#0000ff";
     
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
 

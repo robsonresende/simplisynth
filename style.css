@@ -20,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
 }
 
 
@@ -165,7 +165,7 @@ a {
 }
 
 .pianokey {
-  border: 1px solid var(--gray);
+  border: 3px solid var(--gray);
 }
 
 .wkey {
