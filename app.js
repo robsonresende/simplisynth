@@ -19,7 +19,7 @@ keys.forEach((key) => {
           if (trem.checked) {
 
             const osc2 = ctx.createOscillator();
-            osc2.frequency.value = 28;
+            osc2.frequency.value = 20;
             osc2.connect(master.gain);
             osc2.start();
 

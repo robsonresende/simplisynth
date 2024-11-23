@@ -1,6 +1,6 @@
 # simplisynth
 #### Video Demo:  <URL HERE>
-#### Description:
+#### Description: a very simple synthesizer.
 ## Files:
 
 ### index.html
