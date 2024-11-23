@@ -1,38 +1,50 @@
 const keys = document.querySelectorAll(".pianokey")
 
+
 keys.forEach((key) => {
+
+
       key.addEventListener('pointerdown', (e) => {
 
-        // pointerup to off the button
-      key.addEventListener('pointerup', (e) => {
-        osc.stop();
-        key.style.borderColor = "#aaaaaa";
-      });
+          key.style.borderColor = "#0000ff";
 
-      // pointerleave in case the user leave the button
-      key.addEventListener('pointerleave', (e) => {
-        osc.stop();
-        key.style.borderColor = "#aaaaaa";
-      });
+          const ctx = new (window.AudioContext || window.webkitAudioContext)();
 
-      key.style.borderColor = "#0000ff";
-    
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+          const master = ctx.createGain();
+          master.gain.value = 0.9;
+          master.connect(ctx.destination);
 
-      const master = ctx.createGain();
-      master.gain.value = 0.9;
-      master.connect(ctx.destination);
+          const trem = document.getElementById("tremolo");
 
-      const osc = ctx.createOscillator();
-      osc.frequency.value = key.dataset.key * document.querySelector('input[name="oct-input"]:checked').value;
+          if (trem.checked) {
 
-      osc.type = document.querySelector("#select-wave").value;
+            const osc2 = ctx.createOscillator();
+            osc2.frequency.value = 28;
+            osc2.connect(master.gain);
+            osc2.start();
 
-      osc.connect(master);
+          }
 
-      osc.start();
+          const osc = ctx.createOscillator();
+          osc.frequency.value = key.dataset.key * document.querySelector('input[name="oct-input"]:checked').value;
+
+          osc.type = document.querySelector("#select-wave").value;
+
+          osc.connect(master);
+
+          osc.start(); 
+
+          key.addEventListener('pointerup', (x) => {
+            osc.stop();
+            key.style.borderColor = "#aaaaaa";
+          });
+
+          key.addEventListener('pointerleave', (y) => {
+            osc.stop();
+            key.style.borderColor = "#aaaaaa";
+          });
+            
+      
     });
 
-    
 });
-

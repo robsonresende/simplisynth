@@ -12,6 +12,7 @@
   --black: #000000;
   --shiny: #ffff80;
   --gray: #aaaaaa;
+  --red: #a82c31;
 }
 
 body {
@@ -48,7 +49,7 @@ a {
   width: 70vw;
   height: 250px;
   padding: 1%;
-  background-color: var(--blue);
+  background-color: var(--red);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
@@ -165,7 +166,7 @@ a {
 }
 
 .pianokey {
-  border: 3px solid var(--gray);
+  border: 2px solid var(--gray);
 }
 
 .wkey {

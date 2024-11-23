@@ -34,32 +34,32 @@
           </select>
         </div>
 
-        <label class="detune">
-          <input type="checkbox">
-          <span class="checkm"></span>
-        </label>
+        <div class="detune">
+          <label for="tremolo"></label>
+          <input type="checkbox" id="tremolo" checked>
+        </div>
         
       </div>
         
       <div class="main-container">
-          <div class="pianokey wkey" id="k01" data-key="110.000"  onclick='play("k01", show(this))'></div>
-          <div class="pianokey bkey" id="k02" data-key="116.541"  onclick='play("k02", show(this))'></div>
-          <div class="pianokey wkey" id="k03" data-key="123.471"  onclick='play("k03", show(this))'></div>
-          <div class="pianokey wkey" id="k04" data-key="130.813"  onclick='play("k04", show(this))'></div>
-          <div class="pianokey bkey" id="k05" data-key="138.591"  onclick='play("k05", show(this))'></div>
-          <div class="pianokey wkey" id="k06" data-key="146.832"  onclick='play("k06", show(this))'></div>
-          <div class="pianokey bkey" id="k07" data-key="155.563"  onclick='play("k07", show(this))'></div>
-          <div class="pianokey wkey" id="k08" data-key="164.814"  onclick='play("k08", show(this))'></div>
-          <div class="pianokey wkey" id="k09" data-key="174.614"  onclick='play("k09", show(this))'></div>
-          <div class="pianokey bkey" id="k10" data-key="184.997"  onclick='play("k10", show(this))'></div>
-          <div class="pianokey wkey" id="k11" data-key="195.998"  onclick='play("k11", show(this))'></div>
-          <div class="pianokey bkey" id="k12" data-key="207.652"  onclick='play("k12", show(this))'></div>
-          <div class="pianokey wkey" id="k13" data-key="220.000"  onclick='play("k13", show(this))'></div>
-          <div class="pianokey bkey" id="k14" data-key="233.082"  onclick='play("k14", show(this))'></div>
-          <div class="pianokey wkey" id="k15" data-key="246.942"  onclick='play("k15", show(this))'></div>
-          <div class="pianokey wkey" id="k16" data-key="261.626"  onclick='play("k16", show(this))'></div>
-          <div class="pianokey bkey" id="k17" data-key="277.183"  onclick='play("k17", show(this))'></div>
-          <div class="pianokey wkey" id="k18" data-key="293.665"  onclick='play("k18", show(this))'></div>
+          <div class="pianokey wkey" id="k01" data-key="110.000"></div>
+          <div class="pianokey bkey" id="k02" data-key="116.541"></div>
+          <div class="pianokey wkey" id="k03" data-key="123.471"></div>
+          <div class="pianokey wkey" id="k04" data-key="130.813"></div>
+          <div class="pianokey bkey" id="k05" data-key="138.591"></div>
+          <div class="pianokey wkey" id="k06" data-key="146.832"></div>
+          <div class="pianokey bkey" id="k07" data-key="155.563"></div>
+          <div class="pianokey wkey" id="k08" data-key="164.814"></div>
+          <div class="pianokey wkey" id="k09" data-key="174.614"></div>
+          <div class="pianokey bkey" id="k10" data-key="184.997"></div>
+          <div class="pianokey wkey" id="k11" data-key="195.998"></div>
+          <div class="pianokey bkey" id="k12" data-key="207.652"></div>
+          <div class="pianokey wkey" id="k13" data-key="220.000"></div>
+          <div class="pianokey bkey" id="k14" data-key="233.082"></div>
+          <div class="pianokey wkey" id="k15" data-key="246.942"></div>
+          <div class="pianokey wkey" id="k16" data-key="261.626"></div>
+          <div class="pianokey bkey" id="k17" data-key="277.183"></div>
+          <div class="pianokey wkey" id="k18" data-key="293.665"></div>
       </div>
 
       <div class="foot-container">
@@ -67,13 +67,7 @@
       </div>
     </div>
 
-     <script src="app.js"></script> 
-     <script type="text/javascript">
-        function show(key) {
-          let mykey = key.getAttribute("data-key");
-          return mykey;
-        }
-     </script>
+     <script src="app.js"></script>
 
   </body>
 </html>
