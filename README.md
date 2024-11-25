@@ -1,5 +1,5 @@
 # simplisynth
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/nCa4d0D-Djc
 #### Description: a very simple synthesizer.
 ## Files:
 
